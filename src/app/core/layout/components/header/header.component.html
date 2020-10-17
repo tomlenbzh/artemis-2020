@@ -1,0 +1,48 @@
+<header>
+  <mat-toolbar class="header" [ngClass]="isOnTop === true ? 'header-transparent' : 'header-black'">
+  
+    <!-- HEADER LOGO -->
+    <img class="header-logo"alt="App Logo" src="../../../../../assets/images/logos/top-left-white.png" />
+    <span class="spacer"></span>
+
+    <!-- HEADER ITEMS -->
+    <span class="header-content-full" *ngFor="let menuItem of menuList; let i = index">
+      <button mat-button *ngIf="!menuItem?.children" class="header-button" [routerLink]="menuItem?.route">
+        {{ menuItem?.title | translate }}
+      </button>
+
+      <!-- HEADER ITEM CHILDREN -->
+      <div class="header-item-children" *ngIf="menuItem?.children">
+        <button mat-button class="header-button">
+          <span *ngIf="menuItem?.title" class="child-title" >{{ menuItem?.title | translate }}</span>
+          <img [src]="currentLanguageFlag" class="flag-img" *ngIf="!menuItem?.title">
+        </button>
+
+        <div class="children" [ngClass]="isLastItem(menuList, i) === true ? 'children-right' : 'children-left'">
+          <button mat-button class="children-btn" *ngFor="let child of menuItem?.children">
+
+            <div *ngIf="!child?.flag"class="menu-button"  [routerLink]="child?.route">
+              {{ child?.title | translate }}
+            </div>
+
+            <div class="menu-button flag-btn" *ngIf="child?.flag" (click)="changeLanguage(child?.language)">
+              <img [src]="child?.flag" class="flag-img">
+              <span class="flag-label">
+                {{ child?.languageLabel | translate }}
+              </span>
+            </div>
+
+          </button>
+        </div>
+      </div>
+    </span>
+
+    <!-- HEADER BUTTON SMALL SCREEN -->
+    <span class="header-content-small">
+      <button mat-icon-button class="header-button-small" (click)="openSidenav()">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </span>
+
+  </mat-toolbar>
+</header>

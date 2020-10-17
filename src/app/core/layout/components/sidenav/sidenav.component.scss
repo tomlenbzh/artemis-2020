@@ -1,0 +1,32 @@
+.sidenav-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.sidenav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 25;
+  width: 300px;
+  background: #171b21;
+  overflow: auto;
+}
+
+.open {
+  left: 0px;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.close {
+  left: -300px;
+}

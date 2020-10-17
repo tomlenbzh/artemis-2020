@@ -1,0 +1,10 @@
+<div class="sidenav-container" *ngIf="isSidenavOpen">
+  <div class="sidenav-overlay" (click)="closeSidenav()"></div>
+  <div class="sidenav" [ngClass]="showSidenav ? 'open' : 'close'">
+    <app-accordion [options]="options"
+                   [menuList]="menuList"
+                   (lang)="changeLanguage($event)"
+                   (sidenav)="closeSidenav($event)">
+    </app-accordion>
+  </div>
+</div>

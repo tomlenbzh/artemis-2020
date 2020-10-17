@@ -1,0 +1,16 @@
+<app-header [isOnTop]="isOnTop"
+            [currentLanguage]="currentLanguage" 
+            [menuList]="menuList"
+            [currentLanguageFlag]="currentLanguageFlag"
+            (lang)="changeLanguage($event)"
+            (sidenav)="toggleSidenav($event)">
+</app-header>
+
+<app-sidenav [isSidenavOpen]="isSidenavOpen"
+             [menuList]="menuList"
+             (sidenav)="toggleSidenav($event)">
+</app-sidenav>
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer>
