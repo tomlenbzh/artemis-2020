@@ -1,6 +1,8 @@
 <div class="sidenav-container" *ngIf="isSidenavOpen">
   <div class="sidenav-overlay" (click)="closeSidenav()"></div>
   <div class="sidenav" [@slideInOut]="showSidenav">
+
+    <!-- ACCORDION MENU -->
     <app-accordion [options]="options"
                    [menuList]="menuList"
                    [currentLanguageFlag]="currentLanguageFlag"

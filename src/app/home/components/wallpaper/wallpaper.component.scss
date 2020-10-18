@@ -34,11 +34,12 @@
 
 .bg-logo {
   width: 400px;
-  -webkit-transition: all ease-in-out 0.5s;
-  -moz-transition: all ease-in-out 0.5s;
-  -ms-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
-  transition: all ease-in-out 0.5s;
+
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 
 .background-txt {
@@ -48,6 +49,7 @@
   color: white;
   margin-left: 10px;
   margin-right: 10px;
+
   -webkit-transition: all ease-in-out 0.5s;
   -moz-transition: all ease-in-out 0.5s;
   -ms-transition: all ease-in-out 0.5s;
@@ -59,6 +61,7 @@
   background: #373c41;
   border: 1px solid white;
   color: white;
+
   -webkit-transition: all ease-in-out 0.5s;
   -moz-transition: all ease-in-out 0.5s;
   -ms-transition: all ease-in-out 0.5s;
@@ -80,4 +83,16 @@
 div.scroll-btn-container {
   -webkit-animation: mover 0.5s infinite alternate;
   animation: mover 0.5s infinite alternate;
+}
+
+@media (max-width: 550px) {
+  .bg-logo {
+    width: 320px;
+  }
+}
+
+@media (max-width: 420px) {
+  .bg-logo {
+    width: 80%
+  }
 }

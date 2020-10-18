@@ -37,7 +37,7 @@
 }
 
 .accordion .menu:hover {
-  background: #262c34;
+  background: #1f242a;
 
   .menu-name {
     padding-left: 10px;
@@ -83,7 +83,11 @@
   }
 
   .submenu-item:hover {
-    background: #262c34;
+    background: #1f242a;
+  }
+
+  .menu-name {
+    text-transform: none;
   }
 }
 

@@ -1,6 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
-import { menuList } from '../../constants/menu.contants';
 import { Languages } from '../../models/language.model';
 import { Config, MenuItem } from '../../models/menu.model';
 
