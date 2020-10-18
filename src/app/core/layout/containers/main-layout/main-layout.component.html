@@ -1,14 +1,15 @@
 <app-header [isOnTop]="isOnTop"
-            [currentLanguage]="currentLanguage" 
             [menuList]="menuList"
             [currentLanguageFlag]="currentLanguageFlag"
-            (lang)="changeLanguage($event)"
+            (language)="changeLanguage($event)"
             (sidenav)="toggleSidenav($event)">
 </app-header>
 
 <app-sidenav [isSidenavOpen]="isSidenavOpen"
              [menuList]="menuList"
-             (sidenav)="toggleSidenav($event)">
+             [currentLanguageFlag]="currentLanguageFlag"
+             (sidenav)="toggleSidenav($event)"
+             (language)="changeLanguage($event)">
 </app-sidenav>
 
 <router-outlet></router-outlet>

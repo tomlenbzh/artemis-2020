@@ -15,7 +15,7 @@
       <div class="header-item-children" *ngIf="menuItem?.children">
         <button mat-button class="header-button">
           <span *ngIf="menuItem?.title" class="child-title" >{{ menuItem?.title | translate }}</span>
-          <img [src]="currentLanguageFlag" class="flag-img" *ngIf="!menuItem?.title">
+          <img *ngIf="!menuItem?.title" class="flag-img" [src]="currentLanguageFlag">
         </button>
 
         <div class="children" [ngClass]="isLastItem(menuList, i) === true ? 'children-right' : 'children-left'">

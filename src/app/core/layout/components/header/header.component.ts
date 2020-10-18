@@ -32,6 +32,7 @@ export class HeaderComponent {
    * Emits the value of the new selected language
    */
   changeLanguage(lang: Languages): void {
+    console.log('HEADER CHANGE LANGUAGE:', lang);
     this.language.emit(lang);
   }
 

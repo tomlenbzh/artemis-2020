@@ -1,0 +1,83 @@
+.full-width-img {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../../../assets/images/wallpapers/home-wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  object-fit: cover;
+  -o-object-fit: cover;
+  -moz-object-fit: cover;
+  -webkit-filter: brightness(0.2);
+  filter: brightness(0.2);
+}
+
+.bg-content {
+  display: table;
+  height: 95vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+.bg-content-middle {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-logo {
+  width: 400px;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.background-txt {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.scroll-btn {
+  background: #373c41;
+  border: 1px solid white;
+  color: white;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.scroll-btn:hover {
+  background: #222527;
+}
+
+.scroll-btn-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+div.scroll-btn-container {
+  -webkit-animation: mover 0.5s infinite alternate;
+  animation: mover 0.5s infinite alternate;
+}

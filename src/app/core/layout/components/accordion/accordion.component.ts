@@ -20,8 +20,9 @@ export class AccordionComponent implements OnInit {
 
   @Input() menuList: MenuItem[];
   @Input() options: Config;
+  @Input() currentLanguageFlag: string;
   @Output() sidenav: EventEmitter<boolean> = new EventEmitter();
-  @Output() lang: EventEmitter<Languages> = new EventEmitter();
+  @Output() language: EventEmitter<Languages> = new EventEmitter();
   private config: Config;
 
   constructor(private router: Router) { }
@@ -36,7 +37,7 @@ export class AccordionComponent implements OnInit {
    * Emits the value of the new selected language
    */
   changeLanguage(lang: Languages): void {
-    this.lang.emit(lang);
+    this.language.emit(lang);
   }
 
   /**
@@ -45,8 +46,8 @@ export class AccordionComponent implements OnInit {
    * @param index: number
    * Decides to redirect on route, change language or to toggle an accordion item
    */
-  manageAction(item: MenuItem, index: number): void {
-    if (item.children) {
+  manageAction(item: MenuItem, index: number, isSubMenuItem: boolean): void {
+    if (item?.children) {
       if (!this.config.multi) {
         this.menuList
           .filter((menu, i) => i !== index && menu.active)
@@ -54,9 +55,14 @@ export class AccordionComponent implements OnInit {
       }
       this.toggleAccordionItem(index);
     } else {
-      this.toggleAccordionItem(index);
-      this.navigateTo(item.route);
-      this.closeSidenav(false);
+      if (isSubMenuItem === false) {
+        this.closeSidenav(isSubMenuItem);
+        this.navigateTo(item.route);
+      } else {
+        item?.flag ? this.changeLanguage(item.language) : this.navigateTo(item.route);
+        this.toggleAccordionItem(index);
+        this.closeSidenav(isSubMenuItem);
+      }
     }
   }
 
