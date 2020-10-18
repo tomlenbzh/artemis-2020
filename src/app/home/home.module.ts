@@ -4,8 +4,10 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { homeContainers } from './containers';
 import { homeComponents } from './components';
-import { SharedModule } from '../shared/shared.module';
+
+import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule } from '../material.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { MaterialModule } from '../material.module';
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    TranslateModule.forChild()
   ]
 })
 export class HomeModule { }

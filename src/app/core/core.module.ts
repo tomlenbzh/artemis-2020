@@ -26,6 +26,7 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule,
     HttpClientModule,
     TranslateModule.forRoot({
+      defaultLanguage: 'fr',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,

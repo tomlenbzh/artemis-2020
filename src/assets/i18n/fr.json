@@ -26,5 +26,13 @@
   "LANGUAGES": {
     "FRENCH": "Français",
     "ENGLISH": "English"
+  },
+  "HOME": {
+    "PAGE_TITLE": "Home",
+    "WALLPAPER": {
+      "TXT_1": "Accélérateur de changement",
+      "TXT_2": "Accompagnateurs de vos transitions individuelles et collectives",
+      "SEE_MORE": "See more"
+    }
   }
 }

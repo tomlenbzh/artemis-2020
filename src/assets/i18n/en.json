@@ -26,5 +26,13 @@
   "LANGUAGES": {
     "FRENCH": "Français",
     "ENGLISH": "English"
+  },
+  "HOME": {
+    "PAGE_TITLE": "Accueil",
+    "WALLPAPER": {
+      "TXT_1": "Change accelerators",
+      "TXT_2": "Accompany your individual and collective transitions",
+      "SEE_MORE": "En savoir plus"
+    }
   }
 }
