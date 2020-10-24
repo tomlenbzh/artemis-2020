@@ -43,7 +43,8 @@
 }
 
 .background-txt {
-  font-weight: 300;
+  font-weight: 100;
+  font-size: medium;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
@@ -58,9 +59,10 @@
 }
 
 .scroll-btn {
-  background: #373c41;
-  border: 1px solid white;
+  background: #10151d;
   color: white;
+  border: 1px solid white;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
 
   -webkit-transition: all ease-in-out 0.5s;
   -moz-transition: all ease-in-out 0.5s;
@@ -70,7 +72,8 @@
 }
 
 .scroll-btn:hover {
-  background: #222527;
+  background: #1f2227;
+  color: white;
 }
 
 .scroll-btn-container {
@@ -78,11 +81,32 @@
   bottom: 0;
   left: 0;
   right: 0;
+
+  -webkit-animation: mover 0.5s infinite alternate;
+  -moz-animation: mover 0.5s infinite alternate;
+  -ms-animation: mover 0.5s infinite alternate;
+  -o-animation: mover 0.5s infinite alternate;
+  animation: mover 0.5s infinite alternate;
 }
 
-div.scroll-btn-container {
-  -webkit-animation: mover 0.5s infinite alternate;
-  animation: mover 0.5s infinite alternate;
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 @media (max-width: 550px) {

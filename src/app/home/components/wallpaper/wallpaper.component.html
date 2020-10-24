@@ -2,11 +2,16 @@
 <div class="bg-content">
   <div class="bg-content-middle">
 
-    <img class="bg-logo mb-50" alt="Artemis" src="../../../../assets/images/logos/artemis-white.png"/>
-    <h3 class="background-txt" [textContent]="'HOME.WALLPAPER.TXT_1' | translate"></h3>
+    <img class="bg-logo animate__animated animate__zoomIn"
+         alt="Artemis"
+         src="../../../../assets/images/logos/artemis-white.png"/>
+
+    <div class="background-txt mt50 animate__animated animate__zoomIn animate__delay-1s"
+         [textContent]="'HOME.WALLPAPER.TXT_2' | translate">
+    </div>
 
     <div class="scroll-btn-container">
-      <button mat-mini-fab class="scroll-btn">
+      <button mat-mini-fab class="scroll-btn animate__animated animate__fadeInDown animate__delay-2s">
         <mat-icon>expand_more</mat-icon>
       </button>
     </div>

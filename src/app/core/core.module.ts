@@ -1,18 +1,19 @@
 import { NgModule, ModuleWithProviders, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, TransferState } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { TransferHttpCacheModule } from '@nguniversal/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { components } from './layout/components';
 import { containers } from './layout/containers';
 
 import { MaterialModule } from '../material.module';
 import { SharedModule } from '../shared/shared.module';
+import { translateBrowserLoaderFactory } from '../shared/loaders/translate-browser.loader';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,14 @@ import { SharedModule } from '../shared/shared.module';
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
+    TransferHttpCacheModule,
     HttpClientModule,
     TranslateModule.forRoot({
       defaultLanguage: 'fr',
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
+        useFactory: translateBrowserLoaderFactory,
+        deps: [HttpClient, TransferState]
       }
     }),
     MaterialModule,

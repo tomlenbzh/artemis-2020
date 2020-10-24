@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { PlatformService } from '../../../../services/platform.service';
 import { ScrollService } from '../../../../services/scroll.service';
 import { Languages } from '../../models/language.model';
 import { MenuItem } from '../../models/menu.model';
@@ -19,6 +20,7 @@ export class MainLayoutComponent implements OnInit, AfterViewInit {
   menuList: MenuItem[] = menuList;
 
   constructor(
+    private platformService: PlatformService,
     private scrollService: ScrollService,
     private translate: TranslateService
   ) {
@@ -65,6 +67,8 @@ export class MainLayoutComponent implements OnInit, AfterViewInit {
    * Set isOnTop variable to false if scroll distance is 50px or more from the top
    */
   private onScroll(): void {
-    this.isOnTop = window.scrollY > 50 ? false : true;
+    if (this.platformService.isPlatformBrowser()) {
+      this.isOnTop = window.scrollY > 50 ? false : true;
+    }
   }
 }
