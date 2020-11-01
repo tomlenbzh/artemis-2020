@@ -18,7 +18,7 @@ import { translateBrowserLoaderFactory } from '../shared/loaders/translate-brows
 @NgModule({
   declarations: [
     ...components,
-    ...containers,
+    ...containers
   ],
   imports: [
     CommonModule,
