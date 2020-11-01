@@ -33,6 +33,43 @@
       "TXT_1": "Accélérateur de changement",
       "TXT_2": "Accompagnateurs de vos transitions individuelles et collectives",
       "SEE_MORE": "See more"
+    },
+    "CAROUSEL": {
+      "SLIDE1": {
+        "TITLE": "Développer ses capacités managériales ou relationnelles",
+        "CONTENT1": "Remettre en question ses pratiques et redéfinir ses priorités",
+        "CONTENT2": "Renforcer son impact et sa capacité à influencer",
+        "CONTENT3": "Transformer sa communication et sa relation aux autres",
+        "CONTENT4": "Franchir un cap dans ses performances"
+      },
+      "SLIDE2": {
+        "TITLE": "Améliorer la performance collective",
+        "CONTENT1": "Mobiliser autour d’une vision partagée",
+        "CONTENT2": "Développer la cohésion et la maturité des équipes",
+        "CONTENT3": "Optimiser les modes opératoires",
+        "CONTENT4": "Faire émerger de nouvelles solutions"
+      },
+      "SLIDE3": {
+        "TITLE": "Interroger la posture stratégique du dirigeant",
+        "CONTENT1": "Appréhender la solitude, les doutes et les interrogations",
+        "CONTENT2": "Réfléchir à sa valeur ajoutée",
+        "CONTENT3": "Ajuster son comportement et sa communication",
+        "CONTENT4": "Savoir transmettre sa vision stratégique"
+      },
+      "SLIDE4": {
+        "TITLE": "Accompagner les transitions organisationnelles",
+        "CONTENT1": "Co-construire au service d’une ambition ou d’une transition",
+        "CONTENT2": "Identifier les processus parallèles et les résistances au changement",
+        "CONTENT3": "Réussir la mise en œuvre d’une action stratégique",
+        "CONTENT4": "Développer la résilience et la capacité d’adaptation de l’organisation"
+      },
+      "SLIDE5": {
+        "TITLE": "Oser le changement",
+        "CONTENT1": "Faciliter la compréhension des mécanismes fondamentaux du changement",
+        "CONTENT2": "Accompagner le manager dans la co-construction et le pilotage du changement",
+        "CONTENT3": "Transformer les discours en réalités opérationnelles",
+        "CONTENT4": "Déployer les démarches agiles du changement"
+      }
     }
   }
 }

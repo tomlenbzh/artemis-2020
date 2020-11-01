@@ -1,0 +1,239 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container:hover {
+  .carousel-slide-img {
+    transform: scale(1.1);
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    right: 0;
+  }
+}
+
+.carousel {
+  height: 350px !important;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.medium-mask {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.2) 100%)
+}
+
+.carousel-slide-img {
+  height: 350px !important;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+
+  -webkit-transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84);
+  -moz-transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84);
+  -ms-transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84);
+  -o-transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding: 40px;
+  color: #fff;
+  text-align: unset;
+}
+
+.slide-title {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.slide-content {
+  margin-top: 50px;
+  display: grid;
+  grid-gap: 10px;
+
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.slide-content-txt {
+  font-size: medium;
+  font-weight: 100;
+  letter-spacing: 1px;
+  line-height: 1.5;
+
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* ++++++++++ CAROUSEL IMAGES CLASSES ++++++++++ */
+
+.center {
+  object-position: center;
+}
+
+.mid-top {
+  object-position: 50% 25%;
+}
+
+/* ++++++++++ CONTROLS CLASSES ++++++++++ */
+
+.control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  z-index: 11;
+  transition: all ease 0.4s;
+
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.control-icon {
+  font-size: xx-large;
+  color: white;
+  cursor: pointer;
+}
+
+.left {
+  width: 10%;
+  left: -10%;
+  justify-content: center;
+}
+
+.right {
+  width: 10%;
+  right: -10%;
+  justify-content: center;
+}
+
+/* ++++++++++ DOTS LIST ++++++++++ */
+
+.dots-list {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 11;
+}
+
+.dot {
+  margin: 5px;
+  height: 5px;
+  width: 5px;
+  border-radius: 5px;
+  background: #6c757d;
+  cursor: pointer;
+}
+
+.active {
+  background: white;
+}
+
+@media only screen and (max-width: 991px) {
+
+  .carousel {
+    height: 400px !important;
+  }
+
+  .carousel-slide-img {
+    height: 400px !important;
+  }
+
+  .slide-content {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .carousel {
+    height: 450px !important;
+  }
+
+  .carousel-slide-img {
+    height: 450px !important;
+  }
+
+  .carousel-caption {
+    padding: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .carousel {
+    height: 330px !important;
+  }
+
+  .carousel-slide-img {
+    height: 330px !important;
+  }
+
+  .slide-content {
+    margin-top: 30px;
+  }
+
+  .slide-title {
+    text-align: left;
+    font-size: large;
+  }
+
+  .slide-content-txt {
+    font-size: small;
+    font-weight: 100;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+
+  .slide-content {
+    margin-top: 10px;
+    grid-gap: 5px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+
+  .carousel {
+    height: 350px !important;
+  }
+
+  .carousel-slide-img {
+    height: 350px !important;
+  }
+}

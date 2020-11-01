@@ -2,6 +2,10 @@
 
 @import './scss/custom-styles.scss';
 
+* {
+  outline: none !important;
+}
+
 html,
 body {
   height: 100%;
